@@ -32,13 +32,8 @@ function asciiCodeShift(char, n) {
   return r;
 }
 export function caesarCipher(s, n) {
-  //turn s to array
-  s = s.split("");
-  //turn to ascii code and apply shift
-  s = s.map((e) => asciiCodeShift(e, n));
-  //join
-  s = s.join("");
-  return s;
+  //turn s to array, turn each word to ascii code and apply shift, join
+  return s.split("").map((e) => asciiCodeShift(e, n)).join("");
 }
 export function analyzeArray(arr) {
   return arr.length == 0
